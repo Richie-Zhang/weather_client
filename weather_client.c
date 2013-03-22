@@ -31,7 +31,7 @@ void weaExp(char i,char* weather){		//将报文中的数据转换成对应的天
 
 void printWeather(char* data){		//根据data打印出相关天气信息
 	if(data[0] == 'D')		//无法提供当天天气
-		printf("Sorry, no given day's weather information for city nanjing!");
+		printf("Sorry, no given day's weather information for city nanjing!\n");
 	else if(data[0] == 'C'){		//可以提供当天天气
 		int year = (data[32]&0x000000ff)*256 + (data[33]&0x000000ff);	//!!!!!!
 		printf("City: %s  Today is %d/%d/%d  Weather information is as follows:\n",data+2,year,data[34],data[35]);

@@ -1,0 +1,190 @@
+richie@ubuntu:~/文档/计算机网络/lab02/weather_client$ ./weather_client_linux_32
+Welcome to Weather Forecast Demo Program!
+Please input City Name in Chinese pinyin(e.g. nanjing or beijing)
+(q)cls,(#)exit
+q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Welcome to Weather Forecast Demo Program!
+Please input City Name in Chinese pinyin(e.g. nanjing or beijing)
+(q)cls,(#)exit
+nanjing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Please enter the given number to query
+1.today
+2.three days from today
+3.custom day by yourself
+(r)back,(q)cls,(#)exit
+===================================================
+1
+City: nanjing  Today is: 2013/03/22  Weather information is as follows: 
+Today's Weather is: rain Wind-level: 5 Temp:28
+2
+City: nanjing  Today is: 2013/03/22  Weather information is as follows: 
+The 1th day's Weather is: rain Wind-level: 5 Temp:28
+The 2th day's Weather is: cloudy Wind-level: 3 Temp:39
+The 3th day's Weather is: rain Wind-level: 2 Temp:13
+3
+Please enter the day number(below 10, e.g. 1 means today):4
+City: nanjing  Today is: 2013/03/22  Weather information is as follows: 
+The 4th day's Weather is: rain Wind-level: 11 Temp:22
+3
+Please enter the day number(below 10, e.g. 1 means today):6
+City: nanjing  Today is: 2013/03/22  Weather information is as follows: 
+The 6th day's Weather is: rain Wind-level: 6 Temp:33
+3
+Please enter the day number(below 10, e.g. 1 means today):9
+Sorry, no given day's weather information for city nanjing!
+3
+Please enter the day number(below 10, e.g. 1 means today):11
+Please enter the day number(below 10, e.g. 1 means today):12
+Please enter the day number(below 10, e.g. 1 means today):0
+Please enter the day number(below 10, e.g. 1 means today):7
+Sorry, no given day's weather information for city nanjing!
+4
+input error!
+5
+input error!
+12
+input error!
+q
+
+Please enter the given number to query
+1.today
+2.three days from today
+3.custom day by yourself
+(r)back,(q)cls,(#)exit
+===================================================
+r
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Welcome to Weather Forecast Demo Program!
+Please input City Name in Chinese pinyin(e.g. nanjing or beijing)
+(q)cls,(#)exit
+beijing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Please enter the given number to query
+1.today
+2.three days from today
+3.custom day by yourself
+(r)back,(q)cls,(#)exit
+===================================================
+1
+City: beijing  Today is: 2013/03/22  Weather information is as follows: 
+Today's Weather is: cloudy Wind-level: 6 Temp:27
+3
+Please enter the day number(below 10, e.g. 1 means today):6
+City: beijing  Today is: 2013/03/22  Weather information is as follows: 
+The 6th day's Weather is: rain Wind-level: 5 Temp:39
+r
+
+
+
+
+
+
+
+
+
+
+Welcome to Weather Forecast Demo Program!
+Please input City Name in Chinese pinyin(e.g. nanjing or beijing)
+(q)cls,(#)exit
+taizhou
+Sorry, Server does not have weather information for city taizhou!
+Welcome to Weather Forecast Demo Program!
+Please input City Name in Chinese pinyin(e.g. nanjing or beijing)
+(q)cls,(#)exit
+c
+Sorry, Server does not have weather information for city c!
+Welcome to Weather Forecast Demo Program!
+Please input City Name in Chinese pinyin(e.g. nanjing or beijing)
+(q)cls,(#)exit
+q
+
+
+
+
+
+
+
+
+
+
+Welcome to Weather Forecast Demo Program!
+Please input City Name in Chinese pinyin(e.g. nanjing or beijing)
+(q)cls,(#)exit
+#
+richie@ubuntu:~/文档/计算机网络/lab02/weather_client$ 
+
