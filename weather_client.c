@@ -7,6 +7,9 @@
 
 #define MAXSEND 33
 #define MAXRECV 137
+#define SERV_PORT 5050
+
+char SERV_IP[15] = "114.212.191.33";
 
 void showPage1(void){			//显示第一个界面
 	printf("Welcome to Weather Forecast Demo Program !\n");
@@ -61,7 +64,7 @@ int main(int argc,char **argv){
 	int sockfd;
 	struct sockaddr_in servaddr;
 	char sendline[MAXSEND], recvline[MAXRECV];
-	char city[10];
+	char city[20];
 	char charOfDay[2];
 
 	if( (sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0 ){		//创建socket
@@ -71,8 +74,8 @@ int main(int argc,char **argv){
 
 	memset(&servaddr, 0, sizeof(servaddr));			//设置服务器套接字地址
 	servaddr.sin_family = AF_INET;
-	servaddr.sin_addr.s_addr = inet_addr("114.212.191.33");
-	servaddr.sin_port = htons(5050);
+	servaddr.sin_addr.s_addr = inet_addr(SERV_IP);
+	servaddr.sin_port = htons(SERV_PORT);
 
 	if( connect(sockfd, (struct sockaddr *)&servaddr, sizeof(servaddr)) < 0 ){	//连接服务器
 		perror("connect error\n");
@@ -94,6 +97,7 @@ int main(int argc,char **argv){
 		else{			
 			memset(sendline, 0, MAXSEND);
 			strcpy(&sendline[2], city);
+			printf("%s\n",sendline);
 			send(sockfd, sendline, MAXSEND, 0);	//将城市信息send到服务器
 			if(recv(sockfd, recvline, MAXRECV, 0) == 0){	//receive服务器返回的数据	
 				perror("receive error\n");
@@ -153,6 +157,20 @@ int main(int argc,char **argv){
 					else if(charOfDay[0] == '3' && strlen(charOfDay) == 1){		//custom day by yourself
 						printf("Please enter the day number(below 10, e.g. 1 means today):");
 						scanf("%s",charOfDay);
+						if(charOfDay[0] == 'r' && strlen(charOfDay) == 1){		//cls
+							system("clear");
+							showPage1();
+							break;
+						}
+						else if(charOfDay[0] == 'q' && strlen(charOfDay) == 1){		//back
+							system("clear");
+							showPage2();
+							continue;
+						}
+						else if(charOfDay[0] == '#' && strlen(charOfDay) == 1){		//exit
+							close(sockfd);
+							exit(0);
+						}
 						memset(sendline, 0, MAXSEND);
 						sendline[0] = 0x01;
 						sendline[1] = 'A';
